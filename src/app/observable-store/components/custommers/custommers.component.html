@@ -1,0 +1,13 @@
+<p>custommers observable store works!</p>
+<button (click)="getHistory()">history</button>
+<button (click)="getCustomers()">get customers</button>
+<button (click)="addCustomer()">Add Customer</button>
+<hr>
+forma1
+<div *ngFor="let customer of customerList$ | async">
+    {{customer.name }}
+</div>
+<hr>Forma 2
+<div *ngFor="let customer of customerList">
+    {{customer.name }}
+</div>

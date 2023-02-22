@@ -1,0 +1,9 @@
+
+<div *ngIf="customers$ | async as customers">
+    <div *ngFor="let customer of customers">
+        {{customer.name}}
+    </div>
+</div>
+
+<button (click)="getCustomers()">Get Customers - Redux</button>
+ {{isLoading$ | async}}
